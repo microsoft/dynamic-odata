@@ -7,7 +7,7 @@ Entity Data Models.
 OData expects the return schema to be static at compile time, there are scenarios where applications would want to construct the return response on the go.
 This library helps to achieve that with configurable model and providing metadata which are used at runtime to create dynamic response schema.
 
-This provides flexibity to have a dynamic schema and still enable the OData magic to work. The library enables you to construct a Controller method of IEnumerable<IEdmEntityObject>> return type and then construct this Object using a mapped Dictionary.
+This provides flexibity to have a dynamic schema and still enable the OData magic to work. The library enables you to construct a Controller method of IEnumerable<IEdmEntityObject> return type and then construct this Object using a mapped Dictionary.
 
 
 ## Installation
