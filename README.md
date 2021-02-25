@@ -1,4 +1,6 @@
 [![build](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml/badge.svg)](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml)
+[![NuGet package](https://img.shields.io/nuget/v/Dynamic.OData.svg)](https://nuget.org/packages/Dynamic.OData)
+[![NuGet downloads](https://img.shields.io/nuget/dt/Dynamic.OData.svg)](https://nuget.org/packages/Dynamic.OData)
 
 # Dynamic OData Query Library
 
