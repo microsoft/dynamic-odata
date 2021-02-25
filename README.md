@@ -20,7 +20,7 @@ Refer to the samples at https://github.com/microsoft/dynamic-odata/blob/main/sam
 
 ## Testing
 
-<git-path>\src>dotnet test
+.\src>dotnet test
 
 |Status|Failed|Passed|Skipped|Total|Duration|
 |------|------|------|-------|-----|--------|
@@ -35,7 +35,7 @@ Refer to the samples at https://github.com/microsoft/dynamic-odata/blob/main/sam
 
 ## Benchmark
 
-<git-path>\src\benchmark\Dynamic.OData.Benchmarks> dotnet run -c Release --filter *
+.\src\benchmark\Dynamic.OData.Benchmarks> dotnet run -c Release --filter *
 
 BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
 Intel Core i7 CPU 860 2.80GHz (Nehalem), 1 CPU, 8 logical and 4 physical cores
