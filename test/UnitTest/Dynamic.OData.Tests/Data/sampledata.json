@@ -1,0 +1,18 @@
+//Copyright (c) Microsoft Corporation.  All rights reserved.// Licensed under the MIT License.  See License.txt in the project root for license information.
+{
+  "@odata.context": "https://localhost:44312/odata/entities/user/$metadata#Collection(Microsoft.Contoso.Models.user)",
+  "value": [
+    {
+      "@odata.type": "#Microsoft.Contoso.Models.user",
+      "id": "03bd9cf8-2f56-4d63-ad77-a5f5e23ddced",
+      "Title": "Project Manager",
+      "FirstName": "Aditya",
+      "LastName": "Sharma",
+      "Age": 28,
+      "Salary": 150000,
+      "BornOn": "1993-02-12T14:43:28.8860376+05:30",
+      "Department": "Office",
+      "EmailAddress": "adisharma@microsoft.com"
+    }
+  ]
+}

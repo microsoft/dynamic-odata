@@ -1,16 +1,21 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
-using System;
+using Xunit;
 
-namespace Dynamic.OData
+namespace Dynamic.OData.Tests
 {
-    public class Class1
+    public class ParserTests
     {
-
-        public void Method1()
+        
+        [Fact]
+        public void TestSelect()
         {
-            return;
+
+            Assert.True(1 == 1);
         }
+         
     }
+
+
 }
