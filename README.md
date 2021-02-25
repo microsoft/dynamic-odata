@@ -1,3 +1,5 @@
+[![build](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml/badge.svg)](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml)
+
 # Dynamic OData Query Library
 
 ## Overview
