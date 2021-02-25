@@ -5,6 +5,15 @@
 
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<PackageReleaseNotes>https://github.com/microsoft/dynamic-odata/blob/main/CHANGELOG.md</PackageReleaseNotes>
+		<RepositoryUrl>https://github.com/microsoft/dynamic-odata</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/microsoft/dynamic-odata</PackageProjectUrl>
+		<Copyright>Copyright (c) Microsoft Corporation.</Copyright>
+		<Authors>Chandrashekar Venkataraman, Manoj R</Authors>
+		<Company>Microsoft Corporation</Company>
+		<PackageTags>odata,dynamic odata</PackageTags>
+		<PackageLicenseExpression></PackageLicenseExpression>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,6 +23,13 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' ">
 		<!-- Define the Items for .NET CORE 3.x -->
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
