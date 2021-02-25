@@ -11,7 +11,7 @@
 		<Copyright>Copyright (c) Microsoft Corporation.</Copyright>
 		<Authors>Chandrashekar Venkataraman, Manoj R</Authors>
 		<Company>Microsoft Corporation</Company>
-		<PackageTags>odata,dynamic odata</PackageTags>
+		<PackageTags>odata,dynamic odata,</PackageTags>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<Version>1.0.2</Version>
