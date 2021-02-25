@@ -21,13 +21,9 @@ Refer to the samples at https://github.com/microsoft/dynamic-odata/blob/main/sam
 ## Testing
 
 <git-path>\src>dotnet test
-
-Starting test execution, please wait...
-A total of 1 test files matched the specified pattern.
 -------------------------------------------------------------------------------------------------------------------------------------
 Passed!  - Failed:     0, Passed:    40, Skipped:     0, Total:    40, Duration: 3 s - Dynamic.OData.Tests.dll (netcoreapp3.1)
 -------------------------------------------------------------------------------------------------------------------------------------
-
 Coverage
 -------------------------------------------------------------------------------------------------------------------------------------
 			Not Covered (Blocks)	|	Not Covered (%Blocks)	|  Covered (Blocks)	|	Covered (%Blocks)	
@@ -38,7 +34,6 @@ Coverage
 ## Benchmark
 
 <git-path>\src\benchmark\Dynamic.OData.Benchmarks> dotnet run -c Release --filter *
-
 
 BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
 Intel Core i7 CPU 860 2.80GHz (Nehalem), 1 CPU, 8 logical and 4 physical cores
