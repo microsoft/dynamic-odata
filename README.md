@@ -11,7 +11,7 @@ This provides flexibity to have a dynamic schema and still enable the OData magi
 
 
 ## Installation
-To install this library, please download the latest version of  [NuGet Package](https://www.nuget.org/packages/dynamic-odata) from [nuget.org](https://www.nuget.org/) and refer it into your project.  
+To install this library, please download the latest version of  [NuGet Package](https://www.nuget.org/packages/Dynamic.OData) from [nuget.org](https://www.nuget.org/) and refer it into your project.  
 
 ## How to use 
 
