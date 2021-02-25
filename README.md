@@ -22,10 +22,11 @@ Refer to the samples at https://github.com/microsoft/dynamic-odata/blob/main/sam
 
 <git-path>\src>dotnet test
 
-|-------|-------------|-------------|--------------|------------|-------------|---------------------------------------|
-|Passed!|Failed:     0|Passed:    40|Skipped:     0|Total:    40|Duration: 3 s|Dynamic.OData.Tests.dll (netcoreapp3.1)|
+|Status|Failed|Passed|Skipped|Total|Duration|
+|------|------|------|-------|-----|--------|
+|Passed!|0|40|0|40|3 s| 
 
-####Coverage
+#### Coverage
 
 |         |Not Covered (Blocks)|Not Covered (%Blocks)|Covered (Blocks)|Covered (%Blocks)|
 |---------|--------------------|---------------------|----------------|-----------------|
