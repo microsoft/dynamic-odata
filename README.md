@@ -1,5 +1,4 @@
 [![build](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml/badge.svg)](https://github.com/microsoft/dynamic-odata/actions/workflows/dotnetcore-build.yml)
-[![Nuget download][download-image]][download-url]
 
 # Dynamic OData Query Library
 
