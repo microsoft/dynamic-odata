@@ -20,7 +20,37 @@ Refer to the samples at https://github.com/microsoft/dynamic-odata/blob/main/sam
 
 ## Testing
 
+<git-path>\src>dotnet test
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+=====================================================================================================================================
+Passed!  - Failed:     0, Passed:    40, Skipped:     0, Total:    40, Duration: 3 s - Dynamic.OData.Tests.dll (netcoreapp3.1)
+=====================================================================================================================================
+
+Coverage
+=====================================================================================================================================
+			Not Covered (Blocks)	|	Not Covered (%Blocks)	|  Covered (Blocks)	|	Covered (%Blocks)	
+=====================================================================================================================================
+.coverage		540			|	12.73%			|	3703		|	87.27%
+=====================================================================================================================================
+
 ## Benchmark
+
+<git-path>\src\benchmark\Dynamic.OData.Benchmarks> dotnet run -c Release --filter *
+
+
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19042
+Intel Core i7 CPU 860 2.80GHz (Nehalem), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=5.0.200-preview.20614.14
+  [Host]     : .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+
+=====================================================================================================================================
+Method				|	Mean		|	Error		|	StdDev		
+=====================================================================================================================================
+ODataGroupByAndAggregate	|	179.2 ms	|	10.53 ms	|	30.20 ms	
+=====================================================================================================================================
 
 ## Contributing
 
