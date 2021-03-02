@@ -14,7 +14,7 @@
 		<PackageTags>odata,dynamicodata,</PackageTags>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
 		<Description>Dynamic OData is a query library built upon OData Web API that allows you to query dynamically created Entity Data Models.
 
 OData expects the return schema to be static at compile time, there are scenarios where applications would want to construct the return response on the go. This library helps to achieve that with configurable model and providing metadata which are used at runtime to create dynamic response schema.
