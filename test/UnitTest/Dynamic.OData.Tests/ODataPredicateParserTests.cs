@@ -49,7 +49,7 @@ namespace Dynamic.OData.Tests
 
         private EdmEntityTypeSettings GetEdmEntityTypeSettings()
         {
-            var data = File.ReadAllText(Directory.GetCurrentDirectory() + @"\Data\EntityTypeSettings.json");
+            var data = File.ReadAllText(Directory.GetCurrentDirectory() + @"/Data/EntityTypeSettings.json");
             data = data.Replace("//Copyright (c) Microsoft Corporation.  All rights reserved.// Licensed under the MIT License.  See License.txt in the project root for license information.\r\n", string.Empty).Trim();
             var settings = JsonConvert.DeserializeObject<EdmEntityTypeSettings>(data);
             return settings;
@@ -616,7 +616,7 @@ namespace Dynamic.OData.Tests
         [Fact]
         public void TestODataRequestHelper_ModifyResponse()
         {
-            var data = File.ReadAllText(Directory.GetCurrentDirectory() + @"\Data\sampledata.json");
+            var data = File.ReadAllText(Directory.GetCurrentDirectory() + @"/Data/sampledata.json");
             data = data.Replace("//Copyright (c) Microsoft Corporation.  All rights reserved.// Licensed under the MIT License.  See License.txt in the project root for license information.\r\n", string.Empty).Trim();
             var odataRequestHelper = new ODataRequestHelper();
             var resp = odataRequestHelper.ModifyResponse(data, true, true, "Test");
