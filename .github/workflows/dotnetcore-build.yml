@@ -35,12 +35,30 @@ jobs:
       with:
         dotnet-version: 3.1
         
+    - name: Install minicover
+      run: dotnet tool install --global minicover --version 3.0.6
+      
     - name: Install dependencies
       run: dotnet restore Dynamic.OData.sln
     
     - name: Build
       run: dotnet build Dynamic.OData.sln --configuration Release --no-restore
     
+    - name: Instrument
+      run: minicover instrument
+      
     - name: Test
       run: dotnet test Dynamic.OData.sln --no-build --configuration Release --verbosity m
           
+    - name: Uninstrument
+      run: minicover uninstrument
+     
+    
+    - name: Report
+      run: minicover report --threshold 95
+      if: ${{ github.event_name == 'pull_request' }}
+    
+    - name: Report coveralls
+      run: minicover coverallsreport --repo-token ${{ secrets.COVERALLS_TOKEN }} --branch ${{ env.BRANCH_NAME }}
+      if: ${{ github.event_name == 'push' }}
+      
