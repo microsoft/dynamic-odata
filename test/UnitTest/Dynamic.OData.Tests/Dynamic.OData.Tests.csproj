@@ -10,12 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Common\**" />
-    <EmbeddedResource Remove="Common\**" />
-    <None Remove="Common\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Data\EntityTypeSettings.json" />
   </ItemGroup>
 
@@ -41,7 +35,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\samples\Dynamic.OData.Samples\Dynamic.OData.Samples.csproj" />
     <ProjectReference Include="..\..\..\src\Dynamic.OData\Dynamic.OData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
 
   <ItemGroup>

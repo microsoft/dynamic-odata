@@ -1,0 +1,55 @@
+//Copyright (c) Microsoft Corporation.  All rights reserved.// Licensed under the MIT License.  See License.txt in the project root for license information.
+{
+  "RouteName": "user",
+  "Properties": [
+    {
+      "PropertyName": "id",
+      "PropertyType": "Guid",
+      "IsNullable": false
+    },
+    {
+      "PropertyName": "Title",
+      "PropertyType": "String"
+    },
+    {
+      "PropertyName": "FirstName",
+      "PropertyType": "String"
+    },
+    {
+      "PropertyName": "LastName",
+      "PropertyType": "String"
+    },
+    {
+      "PropertyName": "Age",
+      "PropertyType": "Int32"
+    },
+    {
+      "PropertyName": "Salary",
+      "PropertyType": "Decimal"
+    },
+    {
+      "PropertyName": "BornOn",
+      "PropertyType": "DateTime"
+    },
+    {
+      "PropertyName": "Department",
+      "PropertyType": "String"
+    },
+    {
+      "PropertyName": "EmailAddress",
+      "PropertyType": "String"
+    },
+    {
+      "PropertyName": "EmployeeNumber",
+      "PropertyType": "Int16"
+    },
+    {
+      "PropertyName": "UniversalId",
+      "PropertyType": "Int64"
+    },
+    {
+      "PropertyName": "VacationDaysInHours",
+      "PropertyType": "Double"
+    }
+  ]
+}

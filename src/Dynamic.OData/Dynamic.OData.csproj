@@ -1,9 +1,9 @@
-<!--Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿ <!--Copyright (c) Microsoft Corporation.  All rights reserved.
  Licensed under the MIT License.  See License.txt in the project root for license information.-->
 
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
+<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<PackageReleaseNotes>https://github.com/microsoft/dynamic-odata/blob/main/CHANGELOG.md</PackageReleaseNotes>
 		<RepositoryUrl>https://github.com/microsoft/dynamic-odata</RepositoryUrl>
@@ -11,15 +11,17 @@
 		<Copyright>Copyright (c) Microsoft Corporation.</Copyright>
 		<Authors>Dynamic OData Team</Authors>
 		<Company>Microsoft Corporation</Company>
-		<PackageTags>odata,dynamicodata,</PackageTags>
+		<PackageTags>odata,dynamic odata,</PackageTags>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<Version>1.0.3</Version>
-		<Description>Dynamic OData is a query library built upon OData Web API that allows you to query dynamically created Entity Data Models.
-
-OData expects the return schema to be static at compile time, there are scenarios where applications would want to construct the return response on the go. This library helps to achieve that with configurable model and providing metadata which are used at runtime to create dynamic response schema.
-
-This provides flexibity to have a dynamic schema and still enable the OData magic to work. The library enables you to construct a Controller method of IEnumerable &lt;IEdmEntityObject&gt; return type and then construct this Object using a mapped Dictionary.</Description>
+		<Version>1.0.4</Version>
+		<Description>Dynamic OData is a query library built upon OData Web API that allows you to query dynamically created Entity Data Models. 
+		OData expects the return schema to be static at compile time, there are scenarios where applications would want to construct the return response on the go. This library helps to achieve that with configurable model and providing metadata which are used at runtime to create dynamic response schema. 
+		This provides flexibity to have a dynamic schema and still enable the OData magic to work. The library enables you to construct a Controller method of IEnumerable &lt;IEdmEntityObject&gt; return type and then construct this Object using a mapped Dictionary.
+		</Description>
+</PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -29,13 +31,6 @@ This provides flexibity to have a dynamic schema and still enable the OData magi
 	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' ">
 		<!-- Define the Items for .NET CORE 3.x -->
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Include="..\..\LICENSE">
-	    <Pack>True</Pack>
-	    <PackagePath></PackagePath>
-	  </None>
 	</ItemGroup>
 
 </Project>
