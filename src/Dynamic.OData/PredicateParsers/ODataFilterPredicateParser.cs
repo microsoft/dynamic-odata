@@ -3,7 +3,7 @@
 
 using Dynamic.OData.Models;
 using Dynamic.OData.PredicateParsers.Interface;
-using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.OData.Formatter.Value;
 using Microsoft.OData.Edm;
 using Microsoft.OData.UriParser;
 using System;

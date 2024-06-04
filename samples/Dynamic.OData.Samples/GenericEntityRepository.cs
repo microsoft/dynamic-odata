@@ -40,7 +40,7 @@ namespace Dynamic.OData.Samples
             products.Add(GetProductEntity(Guid.Parse("d7428831-4707-46ab-91e8-f84c50476440".ToLower()), "Azure KeyVault", 5, "Azure KeyVault Service for secrent Management", 50, 100, "Azure"));
             products.Add(GetProductEntity(Guid.Parse("04ac927e-fabf-40db-a2c7-661ee12939cb".ToLower()), "Azure App Service", 5, "Azure App Service for Web Hosting", 500, 900, "Azure"));
             products.Add(GetProductEntity(Guid.Parse("db7ff8e0-2f1c-4455-840e-0eca338dec99".ToLower()), "Azure Functions", 5, "Serverless Azure functions", 80, 170, "Azure"));
-            products.Add(GetProductEntity(Guid.Parse("db7ff8e0-2f1c-4455-840e-0eca338dec99".ToLower()), "Azure Service Bus", 5, "Serverless Azure functions", 80, 170, "Azure"));
+            products.Add(GetProductEntity(Guid.Parse("49A4BAAF-9902-4E89-88E5-36CC6A4DB8FE".ToLower()), "Azure Service Bus", 5, "Serverless Azure functions", 80, 170, "Azure"));
             products.Add(GetProductEntity(Guid.Parse("088284f0-dd43-4d51-bbdd-3dd6e964a07a".ToLower()), "Windows Server", 2, "Server OS", 100, 325, "Windows"));
             products.Add(GetProductEntity(Guid.Parse("81740a7c-b00f-45a3-b991-e03132a46712".ToLower()), "XBOX 360", 3, "Legacy Gaming Device", 100, 200, "XBox"));
             products.Add(GetProductEntity(Guid.Parse("937fb1e8-bafc-4824-af5a-33a453ec2cd2".ToLower()), "Office 365 E5", 1, "Office 365", 280, 430, "Office"));

@@ -5,11 +5,12 @@ using Dynamic.OData.Helpers.Interface;
 using Dynamic.OData.Models;
 using Dynamic.OData.PredicateParsers;
 using Dynamic.OData.Samples;
-using Microsoft.AspNet.OData;
-using Microsoft.AspNet.OData.Extensions;
-using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OData;
+using Microsoft.AspNetCore.OData.Formatter.Value;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Query.Validator;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OData;
@@ -24,6 +25,7 @@ using Xunit;
 
 namespace Dynamic.OData.Tests
 {
+    //SAM XU TODO: I just make the complier happy and didn't find time to make the following tests to pass. Please do it yourself
     public class ODataPredicateParserTests
     {
         private IODataRequestHelper _oDataRequestHelper;
@@ -35,11 +37,10 @@ namespace Dynamic.OData.Tests
         public void BeforeEachTest()
         {
             var collection = new ServiceCollection();
-            collection.AddOData();
+            collection.AddControllers().AddOData();
             collection.AddODataQueryFilter();
             _provider = collection.BuildServiceProvider();
             var routeBuilder = new RouteBuilder(Mock.Of<IApplicationBuilder>(x => x.ApplicationServices == _provider));
-            routeBuilder.EnableDependencyInjection();
             _oDataRequestHelper = new ODataRequestHelper();
             _edmEntityTypeSettings = GetEdmEntityTypeSettings();
             _httpContext = new DefaultHttpContext();
@@ -693,7 +694,7 @@ namespace Dynamic.OData.Tests
         {
             var queryValidator = new Mock<IODataQueryValidator>();
             BaseODataPredicateParser.EdmNamespaceName = "Dynamic.OData.Model";
-            queryValidator.Setup(p => p.ValidateQuery(It.IsAny<ODataQueryOptions>())).Verifiable();
+            queryValidator.Setup(p => p.Validate(It.IsAny<ODataQueryOptions>() ,It.IsAny<ODataValidationSettings>())).Verifiable();
             return new ODataFilterManager(
                     _oDataRequestHelper,
                   queryValidator.Object,

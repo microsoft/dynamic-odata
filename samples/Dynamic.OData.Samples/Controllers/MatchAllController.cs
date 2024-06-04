@@ -2,7 +2,6 @@
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
 using MarkdownSharp;
-using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using Dynamic.OData.Helpers.Interface;
 using Dynamic.OData.Interface;
@@ -11,6 +10,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.OData.Formatter.Value;
 
 namespace Dynamic.OData.Samples.Controllers
 {

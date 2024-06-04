@@ -1,17 +1,17 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
-using Dynamic.OData.Helpers.Interface;
-using Dynamic.OData.Models;
-using Microsoft.AspNet.OData.Extensions;
-using Microsoft.AspNet.OData.Routing;
-using Microsoft.AspNetCore.Http;
-using Microsoft.OData.Edm;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Dynamic.OData.Helpers.Interface;
+using Dynamic.OData.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OData.Extensions;
+using Microsoft.OData.Edm;
+using Microsoft.OData.UriParser;
+using Newtonsoft.Json.Linq;
 
 namespace Dynamic.OData.Helpers
 {
@@ -59,7 +59,7 @@ namespace Dynamic.OData.Helpers
             return requestUri;
         }
 
-        public void SetRequestCount(Microsoft.OData.UriParser.ODataUriParser oDataUriParser, HttpRequest httpRequest, int count)
+        public void SetRequestCount(ODataUriParser oDataUriParser, HttpRequest httpRequest, int count)
         {
             var isCountPredicatePresent = oDataUriParser.ParseCount();
             if (isCountPredicatePresent == true)
