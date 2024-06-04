@@ -2,8 +2,8 @@
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
 using BenchmarkDotNet.Attributes;
-using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OData.Formatter.Value;
 using Microsoft.OData.Edm;
 using System;
 using System.Collections.Generic;

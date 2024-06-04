@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
-using Microsoft.AspNet.OData;
 using Dynamic.OData.Models;
 using Microsoft.OData.Edm;
 using Microsoft.OData.UriParser;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.OData.Formatter.Value;
 
 namespace Dynamic.OData.PredicateParsers
 {

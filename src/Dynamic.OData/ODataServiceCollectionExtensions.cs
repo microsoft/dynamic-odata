@@ -6,6 +6,7 @@ using Dynamic.OData.Helpers.Interface;
 using Dynamic.OData.Interface;
 using Dynamic.OData.PredicateParsers;
 using Dynamic.OData.PredicateParsers.Interface;
+using Microsoft.AspNetCore.OData.Query.Validator;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Dynamic.OData

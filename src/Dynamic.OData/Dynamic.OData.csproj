@@ -1,10 +1,10 @@
 ﻿ <!--Copyright (c) Microsoft Corporation.  All rights reserved.
  Licensed under the MIT License.  See License.txt in the project root for license information.-->
 
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
 <PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<PackageReleaseNotes>https://github.com/microsoft/dynamic-odata/blob/main/CHANGELOG.md</PackageReleaseNotes>
 		<RepositoryUrl>https://github.com/microsoft/dynamic-odata</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/microsoft/dynamic-odata</PackageProjectUrl>
@@ -19,19 +19,14 @@
 		OData expects the return schema to be static at compile time, there are scenarios where applications would want to construct the return response on the go. This library helps to achieve that with configurable model and providing metadata which are used at runtime to create dynamic response schema. 
 		This provides flexibity to have a dynamic schema and still enable the OData magic to work. The library enables you to construct a Controller method of IEnumerable &lt;IEdmEntityObject&gt; return type and then construct this Object using a mapped Dictionary.
 		</Description>
+		<OutputType>Library</OutputType>
 </PropertyGroup>
-	<PropertyGroup>
-		<TargetFramework>netcoreapp3.1</TargetFramework>
-	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.OData" Version="7.4.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1' ">
-		<!-- Define the Items for .NET CORE 3.x -->
-		<FrameworkReference Include="Microsoft.AspNetCore.App" />
-	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\..\LICENSE">
 			<Pack>True</Pack>

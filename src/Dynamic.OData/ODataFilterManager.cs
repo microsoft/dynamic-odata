@@ -6,10 +6,11 @@ using Dynamic.OData.Helpers.Interface;
 using Dynamic.OData.Interface;
 using Dynamic.OData.Models;
 using Dynamic.OData.PredicateParsers.Interface;
-using Microsoft.AspNet.OData;
-using Microsoft.AspNet.OData.Extensions;
-using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.OData.Formatter.Value;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Query.Validator;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OData.Edm;
 using Microsoft.OData.UriParser;
 using System;
@@ -98,8 +99,21 @@ namespace Dynamic.OData
             if (sourceEntities.Count() == 0)
                 return sourceEntities;
 
+            ODataValidationSettings validateSettings = request.HttpContext.RequestServices.GetService<ODataValidationSettings>();
+            if (validateSettings == null)
+            {
+                // if no setting, use the default one
+                validateSettings = new ODataValidationSettings
+                {
+                    AllowedQueryOptions = AllowedQueryOptions.All,
+                    AllowedLogicalOperators = AllowedLogicalOperators.All,
+                    AllowedArithmeticOperators = AllowedArithmeticOperators.All,
+                    AllowedFunctions = AllowedFunctions.AllFunctions,
+                };
+            }
+
             //Validate the query from OData perspective.
-            _oDataQueryValidator.ValidateQuery(queryOptions);
+            _oDataQueryValidator.Validate(queryOptions, validateSettings);
 
             var serviceRoot = new Uri(RequestFilterConstants.ODataServiceRoot);
             var parser = new ODataUriParser(model, serviceRoot, _oDataRequestHelper.GetODataRelativeUri(request));
